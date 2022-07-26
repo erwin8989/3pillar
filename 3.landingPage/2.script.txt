@@ -1,0 +1,21 @@
+git branch newbranch3
+git checkout newbranch3
+git branch
+mkdir 3.landingPage && cd 3.landingPage
+vim 1.task.txt
+vim 2.script.txt
+cd /var/www/html/ && > index.html && vim index.html
+<html>
+<body>
+<h1>My first heading</h1>
+<p>My first paragraph</p>
+</body>
+</html>
+cd /3pillar/3.landingPage
+cp /var/www/html/index.html /3pillar/3.landingPage
+cd ..
+git status
+git add .
+git commit -m "Change default landing page + Addig Task + Script"
+git push origin newbranch3
+
