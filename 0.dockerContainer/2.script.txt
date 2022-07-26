@@ -1,0 +1,22 @@
+For these exercises, use a Docker container running the latest Ubuntu image (docker run --rm -it ubuntu 'bash')
+Script:
+docker run -td -p 80:8081 --name 3pillar ubuntu
+docker ps -a
+docker exec -it 3pillar bash
+apt-get update && apt install vim -y && apt install git -y
+git clone https://github.com/erwin8989/3pillar.git
+git config --global user.name "erwin8989"
+git config --global user.email k_erwin1@yahoo.com
+cd 3pillar
+git branch newbranch0
+git checkout newbranch0
+git branch
+mkdir 0.dockerContainer && cd 0.dockerContainer
+vim 1.task.txt
+vim 2.script.txt
+cd ..
+git status
+git add .
+git commit -m "Setting up docker container + Addig Task + Script"
+git push origin newbranch0
+
