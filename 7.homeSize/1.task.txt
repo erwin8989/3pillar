@@ -1,0 +1,1 @@
+Write a script that uses sh (not bash) and that prints the size of each user's home directory.

@@ -1,0 +1,18 @@
+git branch newbranch7
+git checkout newbranch7
+git branch
+mkdir 7.homeSize && cd 7.homeSize
+vim 1.task.txt
+vim 2.script.txt
+vim usershome.sh
+awk -F: '{print $1,$6}' /etc/passwd
+awk -F: '{print $6}' /etc/passwd
+chmod +x usershome.sh
+sh usershome.sh
+du -sh (for each home directory)
+cd ..
+git status
+git add .
+git commit -m "Committing the users home directory + Adding Task + Script"
+git push origin newbranch7
+
