@@ -1,0 +1,1 @@
+Follow the HTTPD logs from the exercise above, but only print log lines from 4xx and 5xx status codes/responses.

@@ -1,0 +1,15 @@
+git branch newbranch5
+git checkout newbranch5
+git branch
+mkdir 5.httpdLogs && cd 5.httpdLogs
+vim 1.task.txt
+vim 2.script.txt
+cat /var/log/apache2/access.log | grep " 4.. " && grep " 5.. "
+ctrl + c
+cp /var/log/apache2/access.log /3pillar/5.httpdLogs
+cd ..
+git status
+git add .
+git commit -m "Print HTTPD logs"
+git push origin newbranch5
+
