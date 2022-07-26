@@ -1,0 +1,12 @@
+git branch newbranch10
+git checkout newbranch10
+git branch
+mkdir 10.gitRepo && cd 10.gitRepo
+vim 1.task.txt
+vim 2.script.txt
+cd ..
+git status
+git add .
+git commit -m "Adding Task + Script"
+git push origin newbranch10
+

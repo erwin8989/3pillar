@@ -1,0 +1,1 @@
+Commit the scripts in different branches in your git repository using git commit messages via the command line.
