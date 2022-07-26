@@ -1,0 +1,1 @@
+Script a guessing game. The range of numbers is 0-10. If the user guess is outside this range, or under or above the number to-be-guessed, print a useful message (e.g., "your guess is higher than the number!"). Allow the user to make 3 guesses before exiting with status code 27. All STDOUT messages are to be printed with cowsay. 
