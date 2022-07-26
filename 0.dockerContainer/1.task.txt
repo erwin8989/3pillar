@@ -1,1 +1,1 @@
-e exercises, use a Docker container running the latest Ubuntu image (docker run --rm -it ubuntu 'bash')
+These exercises, use a Docker container running the latest Ubuntu image (docker run --rm -it ubuntu 'bash')
