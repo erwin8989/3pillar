@@ -1,0 +1,12 @@
+git branch newbranch6
+git checkout newbranch6
+git branch
+mkdir 6.errorSending && cd 6.errorSending
+vim 1.task.txt
+vim 2.script.txt
+cd ..
+git status
+git add .
+git commit -m "Adding Task + Script"
+git push origin newbranch6
+

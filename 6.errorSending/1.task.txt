@@ -1,0 +1,1 @@
+Create a script that sends the status, PID and any lines containing error messages related to Apache service via email.
