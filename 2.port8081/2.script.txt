@@ -1,0 +1,19 @@
+git branch newbranch2
+git checkout newbranch2
+git branch
+mkdir 2.port8081 && cd 2.port8081
+vim 1.task.txt
+vim 2.script.txt
+apt install apache2 -y
+vim port8081.bash
+sed -i 's/80/8081/g' /etc/apache2/ports.conf && sed -i 's/80/8081/g' /etc/apache2/sites-enabled/000-default.conf && service apache2 restart && service apache2 status
+chmod +x port8081.bash
+bash port8081.bash
+cp /etc/apache2/ports.conf /3pillar/2.port8081 && cp /etc/apache2/sites-enabled/000-default.conf /3pillar/2.port8081
+cd ..
+git status
+git add .
+git commit -m "Committing listen on port 8081 + Addig Task + Script"
+git push origin newbranch2
+
+
