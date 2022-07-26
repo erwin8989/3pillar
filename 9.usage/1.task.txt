@@ -1,0 +1,1 @@
+Create a script that shows the CPU, memory and disk usage every 30 minutes and writes the output to a file.

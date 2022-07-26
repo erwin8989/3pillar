@@ -1,0 +1,23 @@
+git branch newbranch9
+git checkout newbranch9
+git branch
+mkdir 9.usage && cd 9.usage
+vim 1.task.txt
+vim 2.script.txt
+apt-get install -y cron && cron
+vim system_stats.sh
+echo TIME = $(date)
+echo MEMORY = $(free -m | awk 'NR==2{printf "%.2f%%\t\t", $3*100/$2 }')
+echo DISK = $(df -h | awk '$NF=="/"{printf "%s\t\t", $5}')
+echo CPU = $(top -bn1 | grep load | awk '{printf "%.2f%%\t\t\n", $(NF-2)}')chmod +x system_stats.sh
+echo 
+chmod +x system_stats.sh
+vim /etc/crontab
+*/30 * * * * root date && /bin/sh /3pillar/9.usage/system_stats.sh >> /3pillar/9.usage/timelog.txt
+cp /etc/crontab /3pillar/9.usage
+cd ..
+git status
+git add .
+git commit -m "Committing script and rontab + Adding Task + Script"
+git push origin newbranch9
+
