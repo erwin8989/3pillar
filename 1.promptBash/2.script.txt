@@ -1,0 +1,18 @@
+git branch newbranch1
+git checkout newbranch1
+git branch
+mkdir 1.promptBash && cd 1.promptBash
+vim 1.task.txt
+vim 2.script.txt
+vim prompt.bash
+cd ~
+echo "PS1=['\d - $SHELL] > \W $ '" >>  .bashrc
+bash --login
+chmod +x prompt.bash
+bash prompt.bash
+cd /3pillar
+git status
+git add .
+git commit -m "Committing bash prompt + Addig Task + Script"
+git push origin newbranch1
+

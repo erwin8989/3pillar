@@ -1,0 +1,1 @@
+Set the bash prompt to include the time and shell name. 
