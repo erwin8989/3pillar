@@ -1,0 +1,28 @@
+git branch newbranch4
+git checkout newbranch4
+git branch
+mkdir 4.sslCertificate && cd 4.sslCertificate
+vim 1.task.txt
+vim 2.script.txt
+cd /etc/apache2/ && mkdir ssl
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/apache2/ssl/apache.key -out /etc/apache2/ssl/apache.crt 
+vim /etc/apache2/apache2.conf
+ServerName localhost
+vim /etc/apache2/sites-available/mysite-ssl.conf 
+<VirtualHost *:443>
+SSLEngine on
+SSLCertificateFile /etc/apache2/ssl/apache.crt
+SSLCertificateKeyFile /etc/apache2/ssl/apache.key
+ServerName localhost
+DocumentRoot /var/www/html
+</VirtualHost>
+a2ensite mysite-ssl.conf
+a2dissite default-ssl.conf 
+a2enmod ssl
+service apache2 restart && service apache2 status
+cd /3pillar
+git status
+git add .
+git commit -m "Installing SSL Cerficates + Addig Task + Script"
+git push origin newbranch4
+
